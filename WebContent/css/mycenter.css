@@ -1,0 +1,704 @@
+/*
+ * Title: Pure CSS3 Backend Panel
+ * Author: Clear
+ * Version: 1.0.0
+ * Create: 2015-06-05
+ * Update: 2015-06-05
+ */
+
+/* CSS Reset */
+ * {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    outline: none;
+    font-weight: normal;
+}
+
+header {
+    color: #fff;
+    text-align: center;
+    min-height: 140px;
+    margin-bottom: 60px;
+}
+header h1 {
+    /*margin-top: 100px;*/
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-weight: 100;
+}
+header a {
+    font-size: 18px;
+    margin-left: 20px;
+}
+.copyright {
+    font-size: 25px;
+    font-weight: 100;
+    color: #fff;
+    text-align: center;
+    margin: 100px 0;
+}
+.copyright a {
+    color: #fff;
+}
+.pb30 {
+    padding-bottom: 30px;
+}
+.fl {
+    float: left
+}
+.fr {
+    float: right
+}
+.ease {
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 6% auto;
+}
+/* Backend Panel Start */
+ .clear-backend {
+    border: 1px solid #e2dedc;
+    width: 100%;
+    height: 610px;
+    position: relative;
+    box-shadow: 0px 0px 50px rgb(226, 134, 94);
+}
+.avatar {
+    width: 200px;
+    height: 200px;
+}
+.avatar div {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    top: 25px;
+    left: 25px;
+}
+.avatar div img {
+    width: 100%;
+    height: auto;
+}
+.clear-backend > input {
+    position: absolute;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+.clear-backend > input:hover {
+    cursor: pointer;
+}
+.clear-backend > input:hover + span, .clear-backend > input:checked + span {
+    background:#4a5b5f;
+    font-size: 20px;
+}
+.clear-backend > i {
+    position: absolute;
+    margin-top: -40px;
+    padding: 0 20px;
+    font-size: 20px;
+}
+.clear-backend > span, .clear-backend > i {
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+.block {
+    border: none;
+    outline: none;
+    background: transparent;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+}
+.clear-backend > input, .clear-backend > span {
+    background:#0f1010fa;
+    color: white;
+    display: block;
+    width: 200px;
+    height:205px;
+    line-height: 200px;
+    text-align: center;
+    z-index: 9;
+    border: 3px solid #c7c1c1;
+    font-size: 21px;
+}
+span img {
+    width: 23px;
+    vertical-align: middle;
+    margin-bottom: 4px;
+    margin-right: 9px;
+}
+.tab-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 200px);
+    height: 100%;
+    padding-top: 60px;
+    overflow: hidden;
+}
+.tab-content section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: none;
+}
+.clear-backend > input.tab-1:checked ~ .tab-content .tab-item-1 {
+    display: block;
+}
+.clear-backend > input.tab-2:checked ~ .tab-content .tab-item-2 {
+    display: block;
+}
+/* Responsive */
+ @media screen and (max-width: 1367px) {
+}
+@media screen and (max-width: 1281px) {
+}
+@media screen and (max-width: 1025px) {
+}
+@media only screen and (max-width: 961px) {
+}
+@media only screen and (max-width: 641px) {
+    .avatar, .clear-backend > input, .clear-backend > span {
+        width: 60px;
+        height: 60px;
+    }
+    .clear-backend > span {
+        filter: alpha(opacity=0);
+        opacity: 0;
+    }
+    .avatar div {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        top: 5px;
+        left: 5px;
+    }
+    .top-bar, .tab-content {
+        width: calc(100% - 60px);
+    }
+}
+@media only screen and (max-width: 481px) {
+}
+* {
+    font-family:Tahoma, Verdana, Arial, "宋体";
+    font-size:15px;
+    margin:0;
+    padding:0;
+    color:#092436;
+    list-style:none;
+}
+img, table, tr, td {
+    border:none;
+    border-collapse:collapse;
+}
+
+.clear {
+    clear:both;
+}
+.hide {
+    display:none;
+}
+body {
+    background:url(../images/bei.png) no-repeat;
+    background-size: cover
+}
+.container {
+    min-width:910px;
+    width:910px;
+}
+.content .c_box {
+    position:relative;
+    background:#e6f0f5;
+}
+.content .nobg {
+    background:#fff;
+}
+.c_box .left {
+    position:absolute;
+    left:0;
+    top:0;
+    _left:-145px;
+}
+.c_box .left img {
+    margin:20px 0 0 43px;
+}
+.c_box .left span.cover {
+    position:absolute;
+    height:40px;
+    width:40px;
+    background:url(http://id3.idqqimg.com/id/img/account/cover.png) no-repeat 0 0;
+    left:43px;
+    top:20px;
+}
+.c_box .left h1 {
+    font-size:33px;
+    font-weight:900;
+    line-height:34px;
+    padding-left:230px;
+}
+.c_box .left a {
+    color:#166ba9;
+    line-height:30px;
+}
+.c_box .right {
+    background:#fff;
+    margin-top: 120px;
+    line-height: 50px;
+}
+.c_box .right input {
+    height:18px;
+    padding:0;
+    margin:0;
+}
+.c_box .right select {
+    margin-right:13px;
+}
+.c_box .right .w_1 {
+    width:161px;
+    overflow:auto;
+}
+.c_box .right .w_90 {
+    width:100px;
+}
+.c_box .right .w_65 {
+    width:65px;
+}
+.c_box .right .w_198 {
+    width:198px;
+}
+.c_box .right .w_192 {
+    width:192px;
+}
+.edit .ipt1_box {
+    background:blue no-repeat 0 0;
+    _padding-left:6px;
+}
+.edit .ipt2_box {
+    background:url(http://id3.idqqimg.com/id/images/ipt_bg_2.png) no-repeat 0 0;
+    _padding-left:6px;
+}
+.c_box .right .ipt1 {
+    background:transparent;
+    border-radius:5px;
+    width:200px;
+    height:24px;
+    line-height:24px;
+    padding:0 6px;
+    padding:0;
+}
+.c_box .right .ipt2 {
+    background:none;
+    width:456px;
+    height:24px;
+    line-height:24px;
+    border:none;
+    padding:0 6px;
+    _padding:0;
+}
+.c_box .right h1 {
+    background:#f2c3ae;
+    font-weight:normal;
+}
+.c_box .right h1 span {
+    cursor:pointer;
+    color:#3a6691;
+    display:inline-block;
+    height:15px;
+    line-height:15px;
+    line-height:18px;
+    background:url(http://id3.idqqimg.com/id/images/edit.png) no-repeat 0 0;
+    padding-left:23px;
+    margin:9px 0 0 8px;
+}
+.icon_box {
+    padding-left:90px;
+    height:25px;
+    overflow:hidden;
+}
+.icon_box ul {
+    height:25px;
+    float:left;
+}
+.icon_box ul li {
+    float:left;
+    width:19px;
+    height:25px;
+    overflow:hidden;
+    padding:0 2px;
+}
+.icon_box .scroll_left, .icon_box .scroll_right {
+    display:block;
+    margin:5px 5px 0 0;
+    float:left;
+}
+.icon_box span {
+    display:block;
+    float:left;
+    line-height:19px;
+    cursor:pointer;
+}
+#qq_age {
+    width:65px;
+}
+.c_box .right tr.even td {
+    background:#aeb7bb6e;
+}
+.c_box .right td {
+    height:30px;
+}
+.c_box .right td.nick_box {
+    background:url(http://id3.idqqimg.com/id/images/nick_bg.png) no-repeat 0 -24px;
+}
+.c_box .right td.gxqm_box {
+    background:url(http://id3.idqqimg.com/id/images/gxqm_bg.png) no-repeat 0 -24px;
+}
+.c_box .right td.hover {
+    background-position:0 center;
+}
+.c_box .right td.focus {
+    background-position:0 center;
+}
+.c_box .right td.tdName {
+    width:80px;
+    padding-left:31px;
+}
+.c_box .right td.tdName1 {
+    width:74px;
+    padding-left:31px;
+}
+.c_box .right td.td2 {
+    padding-left:6px;
+}
+.c_box .right td.privacy {
+    width:140px;
+    padding-left:10px;
+}
+.c_box .right td div.infoEx {
+    width:470px;
+    overflow:hidden;
+}
+.c_box .edit td div.infoEx {
+    background:url(http://id3.idqqimg.com/id/images/area_bg_1.png) no-repeat 0 8px;
+    padding:6px 0;
+}
+.c_box .right td input {
+    padding:0 2px;
+}
+.c_box .right td input.nick {
+    border:none;
+    width:146px;
+    padding:0;
+    padding:0 5px;
+    line-height:24px;
+    height:24px;
+    background:url(http://id3.idqqimg.com/id/images/nick_bg.png) no-repeat 0 -24px;
+    position:relative;
+    left:-5px;
+}
+.span_empty {
+    color:#f00;
+    position:relative;
+    top:-3px;
+}
+.c_box .right td input.personality {
+    border:none;
+    width:633px;
+    padding:0;
+    padding:0 5px;
+    line-height:24px;
+    height:24px;
+    background:url(http://id3.idqqimg.com/id/images/gxqm_bg.png) no-repeat 0 -24px;
+    position:relative;
+    left:-5px;
+}
+.c_box .right td input.hover {
+    background-position:0 0;
+    cursor:auto;
+}
+.c_box .right td input.focus {
+    background-position:0 0;
+    cursor:auto;
+}
+.c_box .right td.privacy div.click {
+    z-index:1;
+}
+.c_box .right td.privacy div span.hover {
+    background:url(http://id3.idqqimg.com/id/images/select.png);
+    width:102px;
+    height:24px;
+    background:url(http://id3.idqqimg.com/id/images/select.png);
+}
+.c_box .right td.privacy div ul {
+    display:none;
+    width:105px;
+    position:absolute;
+    top:24px;
+    left:0;
+    border:solid 1px #bbd7ff;
+    background:#fff;
+}
+.c_box .right td.privacy div ul.ulTop {
+    top:-74px;
+}
+.c_box .right td.privacy div ul li {
+    padding-left:5px;
+    cursor:default;
+    height:24px;
+    line-height:24px;
+}
+.c_box .right td.privacy div ul li.hover {
+    background:#cde6fa;
+    color:#092437;
+}
+.c_box .right td.privacy div.click ul {
+    display:block;
+}
+.c_box .right td div select {
+    display:none;
+}
+.c_box .right td div input {
+    display:none;
+}
+.c_box .right td div textarea {
+    display:none;
+    height:5em;
+    width:464px;
+    border:none;
+    margin-left:2px;
+    margin-top:8px;
+    background:none;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+.c_box .edit h1 span {
+    background:url(http://id3.idqqimg.com/id/images/edit_2.jpg) no-repeat 0 center;
+    cursor:auto;
+    color:#7ab0d6;
+}
+.c_box .edit table tr td div span {
+    display:none;
+}
+.c_box .edit table tr td div select {
+    display:inline-block;
+}
+.c_box .edit table tr td.privacy div span {
+    display:inline-block;
+}
+.c_box .edit table tr td.privacy div select {
+    display:none;
+}
+.c_box .edit table tr td div input {
+    display:inline-block;
+}
+.c_box .edit table tr td div textarea {
+    display:inline-block;
+}
+.c_box .btnBox {
+    padding:13px 0 15px 110px;
+}
+.c_box .btnBox input {
+    background:#f3c3ab;
+    height:30px;
+    width:200px;
+    border-radius: 5px;
+    cursor:pointer;
+    padding-top:2px;
+}
+.c_box .btnBox input.btnCancel {
+    background-position:right 0;
+}
+#introSpan {
+    padding-right:20px;
+    display:inline-block;
+    margin:5px 0;
+}
+.c_box .edit #introSpan {
+    display:none;
+}
+.c_box .right .tips {
+    display:none;
+    color:#999;
+}
+.bg {
+    position:absolute;
+    filter:Alpha(Opacity=10);
+    -moz-opacity:.1;
+    opacity:.1;
+    display:none;
+    top:0;
+    left:0;
+    z-index:6;
+    width:100%;
+    height:100%;
+    background:#000;
+}
+.pop_box {
+    width:440px;
+    height:333px;
+    height:auto;
+    border:solid 1px #cbe1f3;
+    z-index:5;
+    display:none;
+    position:absolute;
+    z-index:7;
+    background:#fff;
+}
+.pop_box .close {
+    position:absolute;
+    right:6px;
+    top:6px;
+    cursor:pointer;
+}
+.pop_box h4 {
+    background:url(http://id3.idqqimg.com/id/img/tips_title.png) 0 0 repeat;
+    height:30px;
+    line-height:30px;
+    margin-bottom:10px;
+    padding-left:10px;
+    font-weight:normal;
+}
+.pop_box ul {
+    width:400px;
+    overflow:auto;
+    margin:0 auto;
+}
+.pop_box ul li {
+    width:200px;
+    overflow:hidden;
+    float:left;
+    height:21px;
+}
+.pop_box ul li span {
+    padding-left:3px;
+    display:inline-block;
+    line-height:21px;
+    white-space:nowrap;
+}
+.pop_box .btn_box {
+    background:#bdd0de;
+    text-align:right;
+    margin-top:10px;
+    padding:5px 0;
+}
+.pop_box .btn_box {
+    background:#f8fafc;
+    text-align:right;
+    margin-top:10px;
+    padding:5px 0;
+}
+.pop_box .btn_box a {
+    margin-right:10px;
+    cursor:pointer;
+    display:inline-block;
+    height:22px;
+    width:49px;
+    line-height:22px;
+    text-align:center;
+    background:url(http://id3.idqqimg.com/id/img/alert_btn.png) 0 0 no-repeat;
+}
+.wait {
+    z-index:5;
+    display:none;
+    position:absolute;
+    z-index:7;
+}
+.alert {
+    width:349px;
+    height:120px;
+    border:solid 1px #cbe1f3;
+    z-index:10;
+    position:absolute;
+    background:#fff;
+    display:none;
+}
+.alert .close {
+    position:absolute;
+    right:6px;
+    top:6px;
+    cursor:pointer;
+}
+.alert h4 {
+    background:url(http://id3.idqqimg.com/id/img/tips_title.png) 0 0 repeat;
+    height:30px;
+    line-height:30px;
+    margin-bottom:10px;
+    padding-left:10px;
+    font-weight:normal;
+}
+.alert p {
+    position:absolute;
+    left:58px;
+    top:53px;
+}
+.alert .btn a {
+    position:absolute;
+    right:10px;
+    bottom:8px;
+    background:url(http://id3.idqqimg.com/id/img/alert_btn.png) 0 0 no-repeat;
+    width:49px;
+    cursor:pointer;
+    line-height:22px;
+    height:22px;
+    text-align:center;
+}
+.alert .btn a:hover {
+    background:url(http://id3.idqqimg.com/id/img/alert_btn_mouseup.png) 0 0 no-repeat;
+}
+.alert .btn a:active {
+    background:url(http://id3.idqqimg.com/id/img/alert_btn_mousedown.png) 0 0 no-repeat;
+}
+#alertimg {
+    position:absolute;
+    left:10px;
+    top:42px;
+}
+.intro_err {
+    display:inline-block;
+    padding-top:10px;
+    color:#f00;
+}
+#map {
+    background:url(http://id3.idqqimg.com/id/img/map.png) no-repeat 0 0;
+    height:532px;
+    width:722px;
+    display:none;
+    z-index:4;
+    position:absolute;
+    left:168px;
+    top:100px;
+}
+.c_box table tr td div span.detailAddrSpan {
+    max-width:196px;
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+}
+.c_box .edit table tr td div span.detailAddrSpan {
+    max-width:196px;
+    display:none;
+    overflow:hidden;
+    white-space:nowrap;
+}
+.info_entry {
+    position:absolute;
+    top:3px;
+    left:355px;
+    _left:230px;
+    width:88px;
+    height:12px;
+    line-height:12px;
+    padding:6px 0 7px 0;
+    text-align:center;
+    background:url(http://id3.idqqimg.com/id/myself/img/info_entry.png) no-repeat 0 0 transparent;
+}

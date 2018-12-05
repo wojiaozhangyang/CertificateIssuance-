@@ -1,0 +1,180 @@
+body, html {
+    color:#333;
+    margin:0;
+    height:100%
+}
+* {
+    box-sizing:border-box
+}
+a, body {
+    color:#000
+}
+body {
+    background:#fff;
+    font-family:unset
+}
+blockquote, body, button, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, html, input, legend, li, ol, p, pre, td, textarea, th, ul {
+    margin:0;
+    padding:0
+}
+a {
+    text-decoration:none;
+    color:#08acee
+}
+button {
+    outline:0
+}
+img {
+    border:0
+}
+button, input, optgroup, select, textarea {
+    margin:0;
+    font:inherit;
+    color:inherit;
+    outline:none
+}
+li {
+    list-style:none
+}
+a {
+    color:#666
+}
+a:hover {
+    color:#eee
+}
+.clearfix:after {
+    clear:both;
+    content:".";
+    display:block;
+    height:0;
+    visibility:hidden
+}
+.change-content {
+    margin-top:-5%
+}
+.change-main {
+    margin:0 auto;
+    width:1000px;
+    height:100%s;
+    box-shadow:0 2px 12px 12px rgba(0, 0, 0, .18);
+    margin-top:-1%;
+    border-radius:10px
+}
+.change-box {
+    margin:1px 0 10px
+}
+.transition {
+    transition:all .3s ease
+}
+.equipment{
+	
+    line-height: 10px;
+}
+legend{
+	font-size: 20px;
+    font-weight: 900;
+        border-bottom: 3px ridge #c1c0ba;
+            margin-bottom: 10px;
+    text-align: center;
+    width:90%;
+}
+.change-box .change-cut .tab {
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    font-size:24px;
+    background-color:#dad8d8;
+    border-radius:10px;
+    font-family:Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
+    position:relative;
+    cursor:default;
+    width:50%;
+    float:left
+}
+.flex-rows {
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-direction:row;
+    flex-direction:row;
+    -ms-flex-pack:center;
+    justify-content:center;
+    -ms-flex-align:center;
+    align-items:center
+}
+.change-box .change-cut ul {
+    border:1px solid #e5e5e5;
+    margin-left:0
+}
+.change-box .change-cut .tab.on {
+    background-color:#212121;
+    color:#fff
+}
+.change-box .change-cut .tab.on:after {
+    content:"";
+    position:absolute;
+    width:0;
+    height:0;
+    border:11px solid;
+    border-color:#20b09f transparent transparent;
+    bottom:-22px;
+    left:50%;
+    transform:translateX(-50%);
+    transition:all .3s ease
+}
+.change-box .contents>.flex-row {
+    -ms-flex-pack:justify;
+    justify-content:space-between
+}
+.change-box .item:hover {
+    box-shadow:0 4px 10px 0 rgba(0, 0, 0, .1)
+}
+.InformationSubmit {
+    border-style:none;
+    width:150px;
+    height:37px;
+    font-size:20px;
+    color:#fff;
+    outline:none;
+    font-weight:700;
+    background-color:#e4c51a;
+    background-size:100% 100%;
+  
+
+    border-radius:50px;
+        margin-left: 240px;
+}
+.InformationSubmit:hover {
+    background:#b9a117;
+}
+
+.footer {
+    color:#fff;
+    font-size:19px;
+    font-weight:400;
+    padding:0 10px;
+    background:#212121
+}
+.footer pre {
+    color:#fff;
+    line-height:25px;
+    background:none!important;
+    border-style:none!important;
+    background:red;
+    height:46px;
+    min-height:46px;
+    height:auto;
+    text-align:center;
+    overflow:visible!important;
+    font-size:18px
+}
+.foot {
+    font-size:8px;
+    line-height:14px;
+    padding:5px 0;
+    color:#000;
+    width:90%;
+    margin:0 auto;
+    text-align:center;
+    border-top:1px solid #000
+    background:black;
+}

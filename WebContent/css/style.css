@@ -1,0 +1,229 @@
+body {
+    margin:0;
+    padding:0;
+       background:url(../images/bg.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    width:100%;
+    height:100%;
+}
+.header-list {
+    list-style:none
+}
+.header-list li {
+    float:left;
+    line-height:62px;
+    margin-left:230px;
+    line-height:43px
+}
+.header-list li:hover {
+    background:#fff
+}
+.header-list li a:hover {
+    color:#000
+}
+.header-list li a {
+    text-decoration:none;
+    color:#fff;
+    padding:0 10px;
+    display:block
+}
+header {
+    height:62px;
+    background:#333;
+    min-width:1200px;
+    font-size:18px;
+    position:absolute;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.w1200, header {
+    width:100%;
+    margin:0 auto;
+    position:fixed
+}
+
+.w1200 {
+    height:100%;
+    padding:0 20px
+}
+.clear {
+    clear:both
+}
+.top {
+    width:1210px;
+    margin:20px auto;
+    overflow:hidden
+}
+video {
+    position:fixed;
+    right:0;
+    bottom:0;
+    min-width:100%;
+    min-height:100%;
+    width:auto;
+    height:auto;
+    z-index:-100;
+    background-size:cover
+}
+.t1 {
+    text-align:center;
+    color:#eecc0d;
+    font-size:25px;
+    font-weight:bolder
+}
+.col-md-5, .col-md-12 {
+    float:inherit
+}
+.col-md-5 {
+    width:360px;
+    height:460px;
+    box-shadow:1px 1px 1000px 1000px rgba(0, 0, 0, .2), 0 0 20px 4px rgba(0, 0, 0, .2);
+    transition:all .5s;
+    cursor:hand;
+    margin:0 auto
+}
+.col-md-5:hover {
+    box-shadow:1px 1px 1000px 1000px rgba(0, 0, 0, .5), 0 0 20px 4px rgba(0, 0, 0, .4)
+}
+.form-control {
+    width:300px;
+    padding:10px;
+    border:1px solid #fff;
+    font-size:15px;
+    text-align:left;
+    background:#fff
+}
+.carousel-inner .item img {
+    width:100%;
+    height:300px
+}
+#DFFF {
+    margin-top:30px;
+    padding-top:20px
+}
+
+#SubmitButton {
+    border-style:none;
+    outline:none;
+    height:38px;
+    line-height:38px;
+    color:white;
+    font-size:14px;
+    font-weight:700;
+    border-radius:5px;
+    background:#e4c51a;
+    cursor:pointer;
+    width:100px
+}
+#inputPassword3, #username {
+    width:200px;
+    text-indent:20;
+    margin-left:20px;
+    display:inline-block
+}
+#username {
+    background:url(../images/user2.png);
+    background-repeat:no-repeat;
+    background-size:33px;
+    background-position:-1px
+}
+#inputPassword3 {
+    background:url(../images/pass2.png);
+    background-repeat:no-repeat;
+    background-size:33px;
+    background-position:-1px
+}
+#RegisterButton {
+    margin-left:20px;
+    border-style:none;
+    outline:none;
+    height:38px;
+    line-height:38px;
+    color:white;
+    font-size:14px;
+    font-weight:700;
+    border-radius:4px;
+    background:#675f59;
+    cursor:pointer;
+    width:100px
+}
+#label1, #label2 {
+    font-size:19px;
+    width:19%;
+    padding-right:0!important;
+    color:#fff;
+    text-align:left;
+    float:left;
+    margin-left:20px
+}
+input[type=checkbox] {
+    width:15px;
+    height:15px;
+    background-color:#fff;
+    -webkit-appearance:none;
+    border:1px solid #c9c9c9;
+    border-radius:2px;
+    outline:none;
+    margin-top:3px
+}
+input[type=checkbox]:checked {
+    outline:none;
+    background-image:url(../images/timg.png);
+    background-size:100%;
+    background-repeat:no-repeat
+}
+.foot {
+    font-size:12px;
+    line-height:22px;
+    padding:5px 0;
+    color:#fff;
+    width:90%;
+    margin:0 auto;
+    text-align:center;
+    border-top:1px solid #fff;
+    margin-top:70px;
+    index:1;
+}
+
+.bead {
+    color:#fff;
+    -ms-flex-pack:justify;
+    justify-content:space-between
+}
+.search {
+    background-color:#fcfdef;
+    padding:10px 200px 10px 0
+}
+.content {
+    width:1210px;
+    margin:0 auto
+}
+.news {
+    border:1px solid #e7e7e7;
+    height:auto;
+    height:300px
+}
+.mynav {
+    width:1210px;
+    margin:0 auto
+}
+.myrow .col-md-10 div {
+    border-bottom:1px solid #e7e7e7;
+    border-left:1px solid #e7e7e7;
+    padding:0
+}
+.row p {
+    margin:0
+}
+.myrow .yes-right-border {
+    border-right:1px solid #e7e7e7
+}
+.myrow .no-left-border {
+    border-left:0
+}
+#SubmitButton:hover {
+    background:#ab9312
+}
+#RegisterButton:hover {
+    background:#544c46
+}

@@ -1,0 +1,99 @@
+body, html {
+    width:100%;
+    height:100%
+}
+body {
+    background:url(../images/bei.png) no-repeat;
+    background-size:cover
+}
+
+.footer, .title {
+    text-align:center
+}
+.footer {
+    border-top:1px solid #333;
+    width:1200px;
+    margin:0 auto;
+    margin-top:10px
+}
+.footer p {
+    font-size:12px;
+    line-height:21px;
+    margin:0
+}
+.content {
+    width:1000px;
+    margin:0 auto
+}
+.tab1 {
+    display:-ms-flexbox;
+    display:flex
+}
+.tab1 div {
+    width:200px;
+    height:40px;
+    border-radius:10px;
+    background-color:#efefef;
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
+    text-align:center;
+    line-height:40px
+}
+.tab1 div.on {
+    background-color:#e9c527
+}
+.box1 {
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    height:450px;
+    border:4px solid #e9c527;
+    padding-top:50px
+}
+.input {
+    width:300px;
+    height:30px;
+    float:left;
+    border:none;
+    border:1px solid #b7b7b7;
+    margin-left:20px;
+    text-indent:2em;
+    outline:none;
+    border-radius:5px
+}
+.inputBox {
+    width:400px;
+    margin:0 auto;
+    overflow:hidden
+}
+.inputBox~.inputBox {
+    margin-top:20px
+}
+.just {
+    width:70px;
+    height:30px;
+    display:block;
+    float:left;
+    text-align:justify;
+    text-align-last:justify;
+    line-height:35px;
+    position:relative
+}
+.just:before {
+    content:":";
+    position:absolute;
+    right:-10px
+}
+.submit {
+    width:200px;
+    height:40px;
+    border:none;
+    border-radius:10px;
+    display:block;
+    margin:0 auto;
+    font-size:17px;
+    background:#e9c527;
+    margin-top:40px
+}
+.submit:hover {
+    background:#a28813
+}
