@@ -12,56 +12,66 @@
 
 <title>帮助中心</title>
 
-<link href="css/base.css" rel="stylesheet" type="text/css">
-<link href="css/home.css" rel="stylesheet" type="text/css">
+<link href="./css/base.css" rel="stylesheet" type="text/css">
+<link href="./css/home.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
-<header id="header" class="header">
+<header id="header" class="header" style="z-index: 10;">
 			<div class="w1200">
+			<div style="float: left;">
+			<img src="./images/with.png" alt="" style="width: 200px;" />
+			</div>
                    <ul class="header-list" style="float: right; margin-top: 10px;">
                       
-                       <li><a href="login.jsp">首&nbsp;&nbsp;&nbsp;页</ a></li>
-                       <li><a href="aboutMe.jsp">联系我们</ a></li>
+                       <li><a href="login.jsp">首&nbsp;&nbsp;&nbsp;页</a></li>
+                       <li><a href="aboutMe.jsp">联系我们</a></li>
                        
                    </ul>
                 </div>
         </header>
-<jsp:include page="header.jsp" flush="true" ></jsp:include>
 <div class="index-page">
 	<div class="solution-more">
+	
 		<div class="solution-more-slide">
 			<div class="container">
+			<h2 style="text-align: center; padding-top: 55px; color: #000;font-size:30px;font-weight: BOLD;">帮助中心</h2>
 				<div class="hd">
-					<ul>
+					<ul style="    margin: 0 80px;" class="hd-x">
 						<li class="item-1 on">
 							<i></i>
 							<div class="text">
 								<h3>注册与登录</h3>
-								<p>出现问题解决办法</p >
+					<p class="font-xx"></p>
+								<!--<p>出现问题解决办法</p >-->
 							</div>
 						</li>
+						
 						<li class="item-2">
 							<i></i>
 							<div class="text">
 								<h3>是否提供私钥</h3>
-								<p>解释字段信息</p >
+								<p class="font-xx"></p>
+								<!--<p>解释字段信息</p >-->
 							</div>
 						</li>
 						<li class="item-3">
 							<i></i>
 							<div class="text">
 								<h3>签发选择</h3>
-								<p>在线、离线</p >
+								<p class="font-xx"></p>
+								<!--<p>在线、离线</p >-->
 							</div>
 						</li>
 					</ul>
-				</div>
-				<ul class="bd" style="position: relative; width: 100%; height: 600px;">
-					<li class="item-1" style="position: absolute; width: 100%; left: 0px; top: 0px;">
+					<p class="help-xx"></p>
+				
+				<ul class="bd" style="position: absolute; width: 1143px; height: 600px;">
+					<li class="item-1" style="z-index: 999; position: absolute; width: 100%; left: 0px; top: 50px;display: none;">
 						<div class="container">
 							<div class="inner">
 								<h2>用户注册与登录</h2>
+								
 								<dl class="intro">
 									<dt>怎样注册成为用户</dt>
 									<dd>首先，在页面点击“注册”，跳转到注册新用户的页面，按照提示填写好个人资料，信息不能为空，在注册资料填写正确的前提下，会提示您注册成功。您就成为我们的用户了！</dd>
@@ -73,7 +83,7 @@
 							</div>
 						</div>
 					</li>
-					<li class="item-2" style="position: absolute; width: 100%; left: 0px; top: 0px; display: none;">
+					<li class="item-2" style="z-index: 999; position: absolute; width: 80%; left: 0px; top: 50px; display: none;">
 						<div class="container">
 							<div class="inner">
 								<h2>是否需要提供公钥</h2>
@@ -87,7 +97,7 @@
 							</div>
 						</div>
 					</li>
-					<li class="item-3" style="position: absolute; width: 1920px; left: 0px; top: 0px; display: none;">
+					<li class="item-3" style="z-index: 999; position: absolute; width: 100%; left: 0px; top:50px; display: none;">
 						<div class="container">
 							<div class="inner">
 								<h2>签发选择</h2>
@@ -100,15 +110,14 @@
 						</div>
 					</li>
 				</ul>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<div style="min-height:580px;"></div>
 
-
-<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="js/SuperSlide.js"></script>
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="./js/SuperSlide.js"></script>
 <script type="text/javascript">
 	$(".solution-more-slide").slide({
 		effect: 'fold'

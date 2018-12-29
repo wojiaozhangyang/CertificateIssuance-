@@ -1,12 +1,4 @@
-/*
- * Title: Pure CSS3 Backend Panel
- * Author: Clear
- * Version: 1.0.0
- * Create: 2015-06-05
- * Update: 2015-06-05
- */
 
-/* CSS Reset */
  * {
     padding: 0;
     margin: 0;
@@ -18,19 +10,21 @@
 
 header {
     color: #fff;
-    text-align: center;
-    min-height: 140px;
+    text-align: left;
+    min-height: 60px;
     margin-bottom: 60px;
-}
-header h1 {
-    /*margin-top: 100px;*/
-    font-size: 50px;
-    margin-bottom: 20px;
-    font-weight: 100;
 }
 header a {
     font-size: 18px;
     margin-left: 20px;
+}
+.headline{
+font-size:30px;
+font-weight:bold;
+color:rgba(51,51,51,1);
+text-align: center;
+    padding-top: 59px;
+
 }
 .copyright {
     font-size: 25px;
@@ -57,20 +51,16 @@ header a {
     -o-transition: all .5s;
     transition: all .5s;
 }
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 6% auto;
-}
+
 /* Backend Panel Start */
  .clear-backend {
-    border: 1px solid #e2dedc;
-    width: 100%;
-    height: 610px;
+    width:990px;
+    height: 500px;
     position: relative;
-    box-shadow: 0px 0px 50px rgb(226, 134, 94);
+   background:#fff;
+   margin:40px auto;
 }
-.avatar {
+.avatar {s
     width: 200px;
     height: 200px;
 }
@@ -96,8 +86,10 @@ header a {
     cursor: pointer;
 }
 .clear-backend > input:hover + span, .clear-backend > input:checked + span {
-    background:#4a5b5f;
-    font-size: 20px;
+    font-size: 16px;
+    color:rgba(0,163,222,1);
+        border-bottom: 3px solid;
+    padding-bottom: 15px;
 }
 .clear-backend > i {
     position: absolute;
@@ -105,12 +97,7 @@ header a {
     padding: 0 20px;
     font-size: 20px;
 }
-.clear-backend > span, .clear-backend > i {
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
-}
+
 .block {
     border: none;
     outline: none;
@@ -120,16 +107,21 @@ header a {
     -webkit-appearance:none;
 }
 .clear-backend > input, .clear-backend > span {
-    background:#0f1010fa;
-    color: white;
+    background:#fff;
+    color: black;
     display: block;
-    width: 200px;
-    height:205px;
-    line-height: 200px;
+    width: 64px;
     text-align: center;
-    z-index: 9;
-    border: 3px solid #c7c1c1;
-    font-size: 21px;
+    font-size: 16px;
+    float: left;
+    font-weight: bold;
+    margin-top: 25px;
+}
+.underLine{
+	width:719px;
+	height:1px;
+	background:rgba(238,238,238,1);
+	    margin: -60px auto 30px;
 }
 span img {
     width: 23px;
@@ -138,10 +130,9 @@ span img {
     margin-right: 9px;
 }
 .tab-content {
-    position: absolute;
     top: 0;
     right: 0;
-    width: calc(100% - 200px);
+    width: 100%;
     height: 100%;
     padding-top: 60px;
     overflow: hidden;
@@ -191,7 +182,6 @@ span img {
 @media only screen and (max-width: 481px) {
 }
 * {
-    font-family:Tahoma, Verdana, Arial, "宋体";
     font-size:15px;
     margin:0;
     padding:0;
@@ -200,7 +190,7 @@ span img {
 }
 img, table, tr, td {
     border:none;
-    border-collapse:collapse;
+   
 }
 
 .clear {
@@ -210,12 +200,8 @@ img, table, tr, td {
     display:none;
 }
 body {
-    background:url(../images/bei.png) no-repeat;
+    background:#eeeeee;
     background-size: cover
-}
-.container {
-    min-width:910px;
-    width:910px;
 }
 .content .c_box {
     position:relative;
@@ -233,15 +219,7 @@ body {
 .c_box .left img {
     margin:20px 0 0 43px;
 }
-.c_box .left span.cover {
-    position:absolute;
-    height:40px;
-    width:40px;
-    background:url(http://id3.idqqimg.com/id/img/account/cover.png) no-repeat 0 0;
-    left:43px;
-    top:20px;
-}
-.c_box .left h1 {
+.left h1 {
     font-size:33px;
     font-weight:900;
     line-height:34px;
@@ -253,7 +231,6 @@ body {
 }
 .c_box .right {
     background:#fff;
-    margin-top: 120px;
     line-height: 50px;
 }
 .c_box .right input {
@@ -291,35 +268,39 @@ body {
 .c_box .right .ipt1 {
     background:transparent;
     border-radius:5px;
-    width:200px;
-    height:24px;
+    width:662px;
+    height:44px;
     line-height:24px;
     padding:0 6px;
-    padding:0;
+    padding:10px;
+    border: 1px solid #999999;
 }
 .c_box .right .ipt2 {
     background:none;
     width:456px;
-    height:24px;
+    height:34px;
     line-height:24px;
     border:none;
     padding:0 6px;
     _padding:0;
 }
 .c_box .right h1 {
-    background:#f2c3ae;
+    background:#0099cc;
     font-weight:normal;
+    width: 145px;
+    height: 44px;
+    font-size:14px;
+        border-radius: 10px;
+margin-top: 20px;
+    margin-left: 707px;
+            color:#fff; 
+                text-align: center;
 }
 .c_box .right h1 span {
     cursor:pointer;
-    color:#3a6691;
+        color: #fdfeff;
     display:inline-block;
-    height:15px;
-    line-height:15px;
-    line-height:18px;
-    background:url(http://id3.idqqimg.com/id/images/edit.png) no-repeat 0 0;
-    padding-left:23px;
-    margin:9px 0 0 8px;
+    margin:0 auto;
 }
 .icon_box {
     padding-left:90px;
@@ -352,17 +333,12 @@ body {
     width:65px;
 }
 .c_box .right tr.even td {
-    background:#aeb7bb6e;
+   border:1px solide;
 }
 .c_box .right td {
     height:30px;
 }
-.c_box .right td.nick_box {
-    background:url(http://id3.idqqimg.com/id/images/nick_bg.png) no-repeat 0 -24px;
-}
-.c_box .right td.gxqm_box {
-    background:url(http://id3.idqqimg.com/id/images/gxqm_bg.png) no-repeat 0 -24px;
-}
+
 .c_box .right td.hover {
     background-position:0 center;
 }
@@ -372,6 +348,10 @@ body {
 .c_box .right td.tdName {
     width:80px;
     padding-left:31px;
+    font-size:14px;
+font-weight:400;
+color:rgba(51,51,51,1);
+    
 }
 .c_box .right td.tdName1 {
     width:74px;
@@ -504,16 +484,14 @@ body {
 .c_box .edit table tr td div textarea {
     display:inline-block;
 }
-.c_box .btnBox {
-    padding:13px 0 15px 110px;
-}
 .c_box .btnBox input {
-    background:#f3c3ab;
-    height:30px;
-    width:200px;
-    border-radius: 5px;
+ width:106px;
+height:44px;
+background:rgba(0,163,222,1);
+border-radius:10px;
     cursor:pointer;
     padding-top:2px;
+    color:#ffffff;
 }
 .c_box .btnBox input.btnCancel {
     background-position:right 0;
@@ -530,19 +508,15 @@ body {
     display:none;
     color:#999;
 }
-.bg {
-    position:absolute;
-    filter:Alpha(Opacity=10);
-    -moz-opacity:.1;
-    opacity:.1;
-    display:none;
-    top:0;
-    left:0;
-    z-index:6;
-    width:100%;
-    height:100%;
-    background:#000;
+.table_font{
+	width:724px;
+	    width: 724px;
+    height: 300px;
+    border: 1px solid rgb(167, 161, 161);
+    margin: 0 auto;
+    border-radius: 10px;
 }
+
 .pop_box {
     width:440px;
     height:333px;
@@ -690,15 +664,17 @@ body {
     overflow:hidden;
     white-space:nowrap;
 }
-.info_entry {
-    position:absolute;
-    top:3px;
-    left:355px;
-    _left:230px;
-    width:88px;
-    height:12px;
-    line-height:12px;
-    padding:6px 0 7px 0;
-    text-align:center;
-    background:url(http://id3.idqqimg.com/id/myself/img/info_entry.png) no-repeat 0 0 transparent;
-}
+/* CSS Document */
+/*鍒嗛〉*/
+#pageGro{ width:400px; height:25px; margin:0px auto; padding-top:30px;}
+#pageGro div,#pageGro div ul li{ font-size:12px; color:#999; line-height:23px; float:left; margin-left:5px;}
+#pageGro div ul li{ width:22px; text-align:center; border:1px solid #999; cursor:pointer;}
+#pageGro div ul li.on{ color:#fff; background:#3c90d9; border:1px solid #3c90d9;}
+#pageGro .pageUp,#pageGro .pageDown{ width:63px; border:1px solid #999; cursor:pointer;}
+#pageGro .pageUp{ text-indent:23px; background:url(../images/pageUp.png) 5px 7px no-repeat;}
+#pageGro .pageDown{ text-indent:-10px; background:url(../images/pageDown.png) 46px 6px no-repeat;}
+
+
+
+
+

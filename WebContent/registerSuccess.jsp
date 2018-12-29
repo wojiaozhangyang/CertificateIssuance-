@@ -15,18 +15,15 @@
 
 <link href="css/stylefrom.css" rel="stylesheet" type="text/css" />
 <link href="css/jsonFormater.css" rel="stylesheet" type="text/css" />
-<link href="css/bootstrap-datetimepicker.css" rel="stylesheet"
-	type="text/css" />
+<link href="css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
 <script type="text/javascript" src="js/jsonFormater.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
-<script type="text/javascript"
-	src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.zh-CN.js"></script>
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
-
-
+<!--  
 <script type="text/javascript">
           var isCommitted = false;//表单是否已经提交标识，默认为false
           function dosubmit(){
@@ -40,6 +37,8 @@
              }
         }
 </script>
+
+-->
 <script type="text/javascript">
 		//初始化标签，配置日期格式插件相关参数
 		$(function() {
@@ -73,7 +72,7 @@
 					"word":{
 						"required":true,
 						"digits":true,
-						"maxlength":2,
+						"maxlength":20,
 						
 					},
 					"basicunitnum":{
@@ -212,9 +211,8 @@
 	</script>
 
 <style>
-body {
-	background: url("./images/bei.png");
-	background-repeat: no-repeat;
+		body {
+	background: #eeeeee;
 	background-size: cover;
 	background-position: center;
 }
@@ -223,7 +221,17 @@ body {
 </head>
 <body>
 
-	<jsp:include page="/header.jsp"></jsp:include>
+		<header id="header" class="header" style="background: rgba(2,16,46,1);    height: 60px">
+			<div class="w1200">
+					<img src="./images/with.png" class="logo-header" height="82px" style="padding-left: 60px;    margin-top: -10px;">
+                   <ul class="header-list" style="float: right; margin-top: 10px;">
+                      <li><a href="mycenter.jsp">用户中心</a></li>
+                       <li><a href="help.jsp">帮助中心</a></li>
+                       <li><a href="aboutMe.jsp">联系我们</a></li>
+                       
+                   </ul>
+                </div>
+        </header>
 
 	<div class="change-content change-box">
 		<div class="change-main">
@@ -234,7 +242,9 @@ body {
 					<li class="transition tab on">不需要上传公钥</li>
 					<li class="transition tab">需要上传公钥</li>
 
-				</ul>	
+				</ul>
+
+				<p class="help-x"></p>
 			</div>
 
 			<!-- end选项卡 -->
@@ -243,338 +253,325 @@ body {
 				<!-- 第一选项卡 -->
 				<div class="content flex-row" style="display: block;">
 
-					<form id="myform1" class="form-horizontal"
-						onsubmit="return dosubmit()"
-						action="${pageContext.request.contextPath }/NotProvideKeyServlet"
-						method="post" style="margin-top: 5px;">
-						
+					<form id="myform1" class="form-horizontal" onsubmit="return dosubmit()" action="${pageContext.request.contextPath }/NotProvideKeyServlet"
+					 method="post" style="margin-top: 5px;">
 
 						<div class="col-md-12">
 							<div class="form-group">
-							<fieldset >
-							<legend>设备ID模块</legend>
-							<div class="equipment">
-						<div class="form-group">
-							<label class="col-sm-2 control-label">省市:</label>
-							<div class="col-sm-6">
-								<select id="province1" onchange="setCity1(this.value)" name="l">
-									<option selected="selected">请选择</option>
-								</select> <select id="city1" onchange="setCounty1(this.value)" name="s"
-									style="display:;">
-									<option selected="selected">请选择</option>
-								</select> <select id="county1" name="c" style="display:;">
-									<option value="" selected="selected">请选择</option>
-								</select>
-								
-							</div>
-						</div>
-									<div class="form-group">
-							<label class="col-sm-2 control-label">行业编码 :</label>
-							<div class="col-sm-7">
-								<select name="Industrycode" class="IndustryCoding">
-									<option value="-1">请选择值</option>
-								</select>
-							</div>
-						</div>
-							<div class="form-group">
-							<label class="col-sm-2 control-label">基层接入单位编号:</label>
-							<div class="col-sm-7">
-								<input type="text" class="form-control" name="basicunitnum"
-									placeholder="请输入基层接入单位编号">
-							</div>
-						</div>
-				
-						
-						<div class="form-group">
-							<label class="col-sm-2 control-label">平台类型 :</label>
-							<div class="col-sm-7">
-								<select id="platform1" name="platform" class="platform1"
-									onchange="PlatformType1(this.value)">
-								</select> <select id="platformValue1" name="platformValue"
-									class="platformValue1">
+								<fieldset>
+									<legend>设备ID模块</legend>
+									<div class="equipment">
+										<div class="form-group">
 
-								</select>
-							</div>
-						</div>
-						
-						<div class="form-group">
-							<label class="col-sm-2 control-label">网络标识 :</label>
-							<div class="col-sm-7">
-								<select name="network" class="network">
-									<option value="-1">请选择值</option>
-								</select>
-							</div>
-						</div>
-										<label class="col-sm-2 control-label">网络类型:</label>
-								<div class="col-sm-7">
-									<label class="radio-inline"> <input type="radio"
-										name="networkType" value="0100">公安信息网
-									</label> <label class="radio-inline"> <input type="radio"
-										name="networkType" value="0200">视频专网
-									</label>
-								</div>
-							</div>
-						</div>
-							</fieldset>
-							
-							<fieldset>
-							<legend>密码模块</legend>
-							<div class="equipment">
-									<div class="form-group">
-							<label class="col-sm-2 control-label">产品型号编码:</label>
-							<div class="col-sm-7">
-								<input type="text" class="form-control" name="produceTypeCode"
-									placeholder="请输入产品型号编码">
-							</div>
-						</div>
-							<div class="form-group">
-							<label class="col-sm-2 control-label">类型编码 :</label>
-							<div class="col-sm-7">
-								<select name="producttype" class="producttype">
-									<option value="-1">请选择值</option>
-								</select>
-							</div>
-						</div>
-						
-						<div class="form-group">
-							<label class="col-sm-2 control-label">生产日期 :</label>
-							<div class="col-sm-4">
-								<div class="input-group date form_datetime"
-									data-date-format="ddMMyyyy" data-link-field="dtp_input1">
-									<input class="form-control" size="16" type="text"
-										name="birthday" id="birthday" value="2018-09-01" readonly>
-									<span class="input-group-addon"> <span
-										class="glyphicon glyphicon-remove"></span>
-									</span> <span class="input-group-addon"> <span
-										class="glyphicon glyphicon-th"></span>
-									</span>
-								</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="col-sm-2 control-label">批次号:</label>
-							<div class="col-sm-7">
-								<input type="text" class="form-control" placeholder="请输入批次号"
-									name="batchnum">
-							</div>
-						</div>
-						</div>
-						
-			</fieldset>
-					<fieldset>
-							<legend>用户模块</legend>
-<div class="equipment">
-							<div class="form-group">
-							<label class="col-sm-2 control-label">输入个数:</label>
-							<div class="col-sm-7">
-								<input type="text" class="form-control" id="num" name="num"
-									placeholder="请输入生成密钥的个数">
-							</div>
-						</div>
+											<div class="col-sm-6">
+												<label class="col-sm-2 control-label">省市：</label>
+												<select id="province1" onchange="setCity1(this.value)" name="l">
+													<option selected="selected">请选择</option>
+												</select> <select id="city1" onchange="setCounty1(this.value)" name="s">
+													<option selected="selected">请选择</option>
+												</select> <select id="county1"  name="c">
+													<option selected="selected">请选择</option>
+												</select>
 
-						<div class="form-group">
-							<label class="col-sm-2 control-label">口令:</label>
-							<div class="col-sm-7">
-								<input type="text" class="form-control" name="word"
-									placeholder="请输入口令">
-							</div>
-						</div>
-						</div>
-					</fieldset>
-				
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-sm-7">
+												<label class="col-sm-2 control-label">行业编码：</label>
+												<select name="Industrycode" class="IndustryCoding">
+													<option value="-1">请选择值</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
 
-						<div><font color="red">${requestScope.city1msg}</font></div>
+											<div class="col-sm-7">
+												<label class="col-sm-2 control-label">基层接入单位编号：</label>
+												<input type="text" class="form-control" name="basicunitnum" placeholder="请输入基层接入单位编号">
+											</div>
+										</div>
 
-						
-				
 
-						<div class="col-sm-offset-2 col-sm-10">
-							<input type="submit" width="100" value="提交"
-								class="InformationSubmit" />
-						</div>
-					</form>
-				</div>
-</div>
-				<!-- end第一选项卡 -->
-				<div class="content flex-row" style="display: none;">
-					<div class="contents clearfix">
-						<!-- 第一选项卡 -->
-						<div class="content flex-row" style="display: block;">
-							<form id="myform2" class="form-horizontal"
-								onsubmit="return dosubmit()"
-								action="${pageContext.request.contextPath }/ProvideKeyServlet"
-								method="post" style="margin-top: 5px;">
-				
+										<div class="form-group">
 
-<fieldset >
-							<legend>设备ID模块</legend>
-							<div class="equipment">
-								<div class="form-group">
-									<label class="col-sm-2 control-label">省市:</label>
-									<div class="col-sm-6">
-										<select id="province2" onchange="setCity2(this.value);"
-											name="l">
-											<option selected="selected">请选择</option>
-										</select> <select id="city2" onchange="setCounty2(this.value);"
-											name="s" style="display:;">
-											<option selected="selected">请选择</option>
-										</select> <select id="county2" name="c" style="display:;">
-											<option value="" selected="selected">请选择</option>
-										</select>
-										
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-sm-2 control-label">行业编码 :</label>
-									<div class="col-sm-7">
-										<select name="Industrycode" class="IndustryCoding">
-											<option value="-1">请选择值</option>
-										</select>
-									</div>
-								</div>
-									<div class="form-group">
-									<label class="col-sm-2 control-label">基层接入单位编号:</label>
-									<div class="col-sm-7">
-										<input type="text" class="form-control" name="basicunitnum"
-											placeholder="请输入基层接入单位编号">
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-sm-2 control-label">平台类型 :</label>
-									<div class="col-sm-7">
-										<select id="platform2" name="platform"
-											onchange="PlatformType2(this.value)">
-											<option>请选择平台类型</option>
+											<div class="col-sm-7">
+												<label class="col-sm-2 control-label">平台类型：</label>
+												<select id="platform1" name="platform" class="platform1" onchange="PlatformType1(this.value)">
+												</select> <select id="platformValue1" name="platformValue" class="platformValue1">
 
-										</select> <select id="platformValue2" name="platformValue">
-											<option>请选择值</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-sm-2 control-label">网络标识 :</label>
-									<div class="col-sm-7">
-										<select name="network" class="network">
-											<option>请选择平台类型</option>
-										</select>
-									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="form-group">
-										<label class="col-sm-2 control-label">网络类型:</label>
+												</select>
+											</div>
+										</div>
+
+										<div class="form-group">
+
+											<div class="col-sm-7">
+												<label class="col-sm-2 control-label">网络标识：</label>
+												<select name="network" class="network">
+													<option value="-1">请选择值</option>
+												</select>
+											</div>
+										</div>
 										<div class="col-sm-7">
-											<label class="radio-inline"> <input type="radio"
-												name="networkType2" value="0100">公安信息网
-											</label> <label class="radio-inline"> <input type="radio"
-												name="networkType2" value="0200">视频专网
+											<label class="col-sm-2 control-label">网络类型：</label>
+
+											<label class="radio-inline" style="margin-top: -10px;"> <input type="radio" name="networkType" value="0100">公安信息网
+											</label> <label class="radio-inline" style="margin-top: -10px;"> <input type="radio" name="networkType" value="0200">视频专网
 											</label>
 										</div>
 									</div>
-								</div>
 							</div>
 							</fieldset>
-							
-							<fieldset >
-							<legend>密码模块</legend>
-							<div class="equipment">
-							<div class="form-group">
-									<label class="col-sm-2 control-label">产品型号编码:</label>
-									<div class="col-sm-7">
-										<input type="text" class="form-control" name="produceTypeCode"
-											placeholder="请输入产品型号编码">
-									</div>
-								</div>
-							
-							<div class="form-group">
-									<label class="col-sm-2 control-label">类型编码:</label>
-									<div class="col-sm-7">
-										<select name="producttype" class="producttype">
-											<option value="-1">请选择值</option>
-										</select>
-									</div>
-								</div>
 
+							<fieldset>
+								<legend>密码模块</legend>
+								<div class="equipment">
+									<div class="form-group">
+										<div class="col-sm-7">
+											<label class="col-sm-2 control-label">产品型号编码：</label>
 
-								<div class="form-group">
-									<label class="col-sm-2 control-label">生产日期:</label>
-									<div class="col-sm-4">
-										<div class="input-group date form_datetime"
-											data-date-format="dd-MM-yyyy" data-link-field="dtp_input1">
-											<input class="form-control" size="16" type="text"
-												name="birthday" id="birthday" value="2018-09-01" readonly>
-											<span class="input-group-addon"> <span
-												class="glyphicon glyphicon-remove"></span>
-											</span> <span class="input-group-addon"> <span
-												class="glyphicon glyphicon-th"></span>
-											</span>
+											<input type="text" class="form-control" name="produceTypeCode" placeholder="请输入产品型号编码">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-7">
+											<label class="col-sm-2 control-label">类型编码：</label>
+
+											<select name="producttype" class="producttype">
+												<option value="-1">请选择值</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<div class="col-sm-4">
+
+											<div class="input-group date form_datetime" data-date-format="ddMMyyyy" data-link-field="dtp_input1">
+											<label class="col-sm-2 control-label">生产日期：</label>
+												<input class="form-con" size="16" type="text" name="birthday" id="birthday" value="2018-09-01" readonly>
+												<span class="input-group-addon"> <span class="glyphicon glyphicon-remove"></span>
+												</span> <span class="input-group-addon"> <span class="glyphicon glyphicon-th"></span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-7">
+											<label class="col-sm-2 control-label">批次号：</label>
+
+											<input type="text" class="form-control" placeholder="请输入批次号" name="batchnum">
 										</div>
 									</div>
 								</div>
 
+							</fieldset>
+							<fieldset>
+								<legend>用户模块</legend>
+								<div class="equipment" style="padding-right: 40px;">
+									<div class="form-group">
+										<div class="col-sm-7">
+											<label class="col-sm-2 control-label">输入个数：</label>
 
+											<input type="text" class="form-control" id="num" name="num" placeholder="请输入生成密钥的个数">
+										</div>
+									</div>
 
-								<div class="form-group">
-									<label class="col-sm-2 control-label">批次号:</label>
-									<div class="col-sm-7">
-										<input type="text" class="form-control" placeholder="请输入批次号"
-											name="batchnum">
+									<div class="form-group">
+										<div class="col-sm-7">
+											<label class="col-sm-2 control-label">口令：</label>
+
+											<input type="text" class="form-control" name="word" placeholder="请输入口令">
+										</div>
 									</div>
 								</div>
-							
-							</div>
 							</fieldset>
-							
-							<fieldset >
-							<legend>用户模块</legend>
-							<div class="equipment">
-							<div class="form-group">
-									<label class="col-sm-2 control-label">公钥:</label>
-									<div class="col-sm-7">
-										<input type="file"  id="fileId" onchange="check()" accept=".txt"  />
-										<br><font color="red">${requestScope.filemsg}</font>
+
+
+							<div>
+								<font color="red">${requestScope.city1msg}</font>
+							</div>
+
+
+
+
+							<div class="col-sm-offset-2 col-sm-10" style="text-align: center;">
+								<input type="submit" width="100" value="提交" class="InformationSubmit" />
+							</div>
+					</form>
+				</div>
+			</div>
+			<!-- end第一选项卡 -->
+			<div class="content flex-row" style="display: none;">
+				<div class="contents clearfix">
+					<!-- 第一选项卡 -->
+					<div class="content flex-row" style="display: block;">
+						<form id="myform2" class="form-horizontal" onsubmit="return dosubmit()" action="${pageContext.request.contextPath }/ProvideKeyServlet"
+						 method="post" style="margin-top: 5px;">
+
+
+							<fieldset>
+								<legend>设备ID模块</legend>
+								<div class="equipment">
+									<div class="form-group">
+										<div class="col-sm-6">
+											<label class="col-sm-2 control-label">省市：</label>
+
+											<select id="province2" onchange="setCity2(this.value);" name="l">
+												<option selected="selected">请选择</option>
+											</select> <select id="city2" onchange="setCounty2(this.value);" name="s">
+												<option selected="selected">请选择</option>
+											</select> <select id="county2" name="c">
+												<option value="" selected="selected">请选择</option>
+											</select>
+
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-7">
+											<label class="col-sm-2 control-label">行业编码：</label>
+
+											<select name="Industrycode" class="IndustryCoding">
+												<option value="-1">请选择值</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-7">
+											<label class="col-sm-2 control-label">基层接入单位编号：</label>
+
+											<input type="text" class="form-control" name="basicunitnum" placeholder="请输入基层接入单位编号">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-7">
+											<label class="col-sm-2 control-label">平台类型：</label>
+
+											<select id="platform2" name="platform" onchange="PlatformType2(this.value)">
+												<option>请选择平台类型</option>
+
+											</select> <select id="platformValue2" name="platformValue">
+												<option>请选择值</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+
+										<div class="col-sm-7">
+											<label class="col-sm-2 control-label">网络标识：</label>
+											<select name="network" class="network">
+												<option>请选择平台类型</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+
+											<div class="col-sm-7">
+												<label class="col-sm-2 control-label">网络类型：</label>
+												<label class="radio-inline"style="margin-top: -10px;" > <input type="radio" name="networkType2" value="0100">公安信息网
+												</label> <label class="radio-inline"style="margin-top: -10px;"> <input type="radio" name="networkType2" value="0200">视频专网
+												</label>
+											</div>
+										</div>
 									</div>
 								</div>
-						
-							
-							</div>
 							</fieldset>
-				
 
-								
+							<fieldset>
+								<legend>密码模块</legend>
+								<div class="equipment">
+									<div class="form-group">
 
-								
-							
-							
+										<div class="col-sm-7">
+											<label class="col-sm-2 control-label">产品型号编码：</label>
+											<input type="text" class="form-control" name="produceTypeCode" placeholder="请输入产品型号编码">
+										</div>
+									</div>
+
+									<div class="form-group">
+
+										<div class="col-sm-7">
+											<label class="col-sm-2 control-label">类型编码：</label>
+											<select name="producttype" class="producttype">
+												<option value="-1">请选择值</option>
+											</select>
+										</div>
+									</div>
+
+
+									<div class="form-group">
+
+										<div class="col-sm-4">
+											
+											<div class="input-group date form_datetime" data-date-format="dd-MM-yyyy" data-link-field="dtp_input1">
+											<label class="col-sm-2 control-label">生产日期：</label>
+												<input class="form-con" size="16" type="text" name="birthday" id="birthday" value="2018-09-01" readonly>
+												<span class="input-group-addon"> <span class="glyphicon glyphicon-remove"></span>
+												</span> <span class="input-group-addon"> <span class="glyphicon glyphicon-th"></span>
+												</span>
+											</div>
+										</div>
+									</div>
+
+
+
+									<div class="form-group">
+										<div class="col-sm-7">
+											<label class="col-sm-2 control-label">批次号：</label>
+											<input type="text" class="form-control" placeholder="请输入批次号" name="batchnum">
+										</div>
+									</div>
+
+								</div>
+							</fieldset>
+
+							<fieldset>
+								<legend>用户模块</legend>
+								<div class="equipment" style="    padding-right: 40px;">
+									<div class="form-group">
+
+										<div class="col-sm-7">
+											<label class="col-sm-2 control-label">公钥：</label>
+										
+											<input type="file" id="fileId" onchange="check()" accept=".txt" />
+											<br>
+											<font color="red">${requestScope.filemsg}</font>
+										</div>
+									</div>
+
+
+								</div>
+							</fieldset>
+
+
 							<font color="red">${requestScope.city2msg}</font>
-							
 
 
-								
 
-								
-							
-							
-								
-								<input type="hidden" id="hello" name="fileString">
-								
-							
-							
-								<div class="col-sm-offset-2 col-sm-10">
-									<input type="submit" width="100" value="提交" 
-										class="InformationSubmit" />
-								</div>
 
-							</form>
 
-						</div>
+
+
+
+
+							<input type="hidden" id="hello" name="fileString">
+
+
+
+							<div class="col-sm-offset-2 col-sm-10" style="text-align: center;">
+								<input type="submit" width="100" value="提交" class="InformationSubmit" />
+							</div>
+
+						</form>
+
 					</div>
 				</div>
 			</div>
-
 		</div>
+
 	</div>
-
-
+	
+	
 
 
 	<script type="text/javascript">
@@ -641,30 +638,27 @@ body {
 		   		for(i=0;i<data.platformList.length;i++){
 		   			var t = data.platformList[i];
 		   			$("#platform1").append('<option value="'+t.rule_mean+'">'+t.rule_mean+'</option>');
+		   			PlatformType1(t.rule_mean);		   					   			
 		   		}	
 		   		
 		   		console.log(data.platformList);
 		   		for(i=0;i<data.platformList.length;i++){
 		   			var t = data.platformList[i];
 		   			$("#platform2").append('<option value="'+t.rule_mean+'">'+t.rule_mean+'</option>');
+		   			PlatformType2(t.rule_mean);
 		   		}	 
 		   		
-		   	 $("#city1").children("option").remove();
-		   	 $("#county1").children("option").remove();
-		   		for(i=0;i<data.provinceList.length;i++){
-		   			
-		   			var t = data.provinceList[i];
-		   			
-		   			
-		   			
+		   	
+		   		for(i=0;i<data.provinceList.length;i++){	   			
+		   			var t = data.provinceList[i];	   			
 		   			$("#province1").append('<option value="'+t.code+'">'+t.name+'</option>');
+		   			setCity1(t.code)	
 		   		}
 		   		
 		   		for(i=0;i<data.provinceList.length;i++){
-		   		
-		   
 		   			var t = data.provinceList[i];
 		   			$("#province2").append('<option value="'+t.code+'">'+t.name+'</option>');
+		   			setCity2(t.code)	
 		   		}	
 	
 		   	}	 
@@ -672,8 +666,9 @@ body {
 		});
 		
 		function PlatformType1(value){
-			console.log(value)
+			
 			$("#platformValue1 option").remove();
+			
 			$.ajax({
 			   	type: "GET",
 			   	url: "sueccessJspJson?type=1&value="+value,
@@ -681,6 +676,7 @@ body {
 			   	dataType:"json",
 			   	success: function(data){ 
 			   console.log(data.device_RulecodeList)
+			   
 			   		var t=data.device_RulecodeList;
 			   		for(i=0;i<data.device_RulecodeList.length;i++){
 			   			var t = data.device_RulecodeList[i];
@@ -692,7 +688,6 @@ body {
 		
 		
 		function PlatformType2(value){
-			
 			$("#platformValue2 option").remove();
 			$.ajax({
 			   	type: "GET",
@@ -705,7 +700,6 @@ body {
 			   		console.log(data.device_RulecodeList);
 			   		for(i=0;i<data.device_RulecodeList.length;i++){
 			   			var t = data.device_RulecodeList[i];
-			   			
 			   			$("#platformValue2").append('<option value="'+t.rule_key+'">'+t.rule_value+'</option>');
 			   		}	 
 			   	}	 
@@ -713,9 +707,10 @@ body {
 		}
 		
 		function setCity1(value){
-		
-			$("#city1 option").remove();
+			$("#city1 option").remove()
 			
+			//$("#city1 option").remove();
+			//$("#county1 option").remove();
 			$.ajax({
 			   	type: "GET",
 			   	url:"sueccessJspJson?type=2&value="+value,
@@ -727,13 +722,14 @@ body {
 			   			
 			   			var t = data.CityTwo[i];
 			   			$("#city1").append('<option value="'+t.code+'">'+t.name+'</option>');
+			   			setCounty1(t.code);
 			   		}	 
 			   	}	 
 			});
 		}
 		
 		function setCounty1(value){
-		
+			//$("select[name='c']").empty();
 			$("#county1 option").remove();
 			
 			$.ajax({
@@ -743,8 +739,9 @@ body {
 			   	dataType:"json",
 			   	success: function(data){ 
 			   		for(i=0;i<data.CityTwo.length;i++){
-			   			var t = data.CityTwo[i];
+			   			var t = data.CityTwo[i];	   			
 			   			$("#county1").append('<option value="'+t.code+'">'+t.name+'</option>');
+			   			
 			   		}	 
 			   	}	 
 			});
@@ -762,6 +759,7 @@ body {
 			   		for(i=0;i<data.CityTwo.length;i++){
 			   			var t = data.CityTwo[i];
 			   			$("#city2").append('<option value="'+t.code+'">'+t.name+'</option>');
+			   			setCounty2(t.code);
 			   		}	 
 			   	}	 
 			});

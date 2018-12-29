@@ -11,14 +11,25 @@
 <title>选择证书</title>
 </head>
 <link rel="stylesheet" href="css/index.css">
-<body style="background: url(./images/bei.png); background-size: cover; width: 100%; height: 100%; position: relative;">
-	<jsp:include page="./header.jsp" flush="true" ></jsp:include>
+<body style="background:#eeee">
+  <header id="header" class="header" style="background: rgba(2,16,46,1);height: 60px;">
+    <div class="w1200">
+        <img src="./images/with.png" class="logo-header" height="82px" style="padding-left: 60px;margin-top: -10px;">
+                 <ul class="header-list" style="float: right; margin-top: 10px;margin-right: 40px;">
+                    
+                     <li><a href="login.jsp">首&nbsp;&nbsp;&nbsp;页</a></li>
+                     <li><a href="aboutMe.jsp">联系我们</a></li>
+                     
+                 </ul>
+              </div>
+      </header>
 	<h1 class="title">请选择证书获取方式</h1>
 <div class="content">
   <div class="tab1">
     <div :class="state ?'on' : '' " @click="state=true">在线获取</div>
     <div  :class="!state ?'on' : '' " @click="state=false">离线获取</div>
   </div>
+  <p class="underline"></p>
   <div class="box">
 	<form action="${pageContext.request.contextPath }/EmailServlet" method="post">
       <div class="box1" v-show="state" style="height:400px;padding-top:100px;">
@@ -29,7 +40,6 @@
   <div class="box1" v-show="!state">
   
   <form action="${pageContext.request.contextPath }/OfflineAcquisitionServlet" method="post">
-    <h2 class="title">请填写收货地址:</h2>
     <p class="inputBox"><span class="just">姓名</span><input class="input" name="AddressName" type="text"  placeholder="请输入姓名"></p>
     <p class="inputBox"><span class="just">电话</span><input class="input" name="AddressPhone" type="number" maxlength="11" placeholder="请输入电话"></p>
    

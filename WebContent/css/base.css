@@ -17,15 +17,10 @@
     color: #aaa;
 }
 
-::selection {
-    background: #111;
-    color: #fff;
-    font-weight: bold
-}
-
 html {
     color: #333;
 }
+
 
 body {
     min-width: 1200px;
@@ -35,8 +30,8 @@ body {
 }
 .header-list li {
     float:left;
-    line-height:62px;
-    margin-left:230px;
+    line-height:60px;
+        margin: 0 60px 0 20px;
     line-height:43px
 }
 .header-list li:hover {
@@ -45,28 +40,28 @@ body {
 .header-list li a:hover {
     color:#000
 }
+
 .header-list li a {
     text-decoration:none;
-    color:black;
+    color:#fff;
     padding:0 10px;
     display:block
 }
 header {
-    height:62px;
+    height:60px;
     min-width:1200px;
-    font-size:18px;
+    font-size:16px;
     position:absolute;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 .w1200, header {
     width:100%;
-    margin:0 auto;
-    position:fixed
+    background:rgba(2,16,46,1);
 }
 
 .w1200 {
-    height:100%;
-    padding:0 20px
+    /*height:100%;*/
+    padding:0 20px;
+    background:rgba(2,16,46,1);
 }
 .clear {
     clear:both
@@ -110,6 +105,7 @@ body {
    
     color: #666;
     font: 12px/150% Arial,Verdana, "microsoft yahei";
+    background:#eeeeee;
   
 }
 
@@ -183,7 +179,6 @@ em {
 }
 
 h2, h3 {
-    font-family: "microsoft yahei";
     font-weight: 100;
 }
 

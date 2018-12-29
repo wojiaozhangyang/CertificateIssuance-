@@ -2,13 +2,19 @@ body, html {
     width:100%;
     height:100%
 }
+*{
+	margin:0;
+	padding:0;
+}
 body {
     background:url(../images/bei.png) no-repeat;
     background-size:cover
 }
 
 .footer, .title {
-    text-align:center
+    text-align:center;
+    font-size: 24px;
+    margin-top: 58px;
 }
 .footer {
     border-top:1px solid #333;
@@ -22,36 +28,68 @@ body {
     margin:0
 }
 .content {
-    width:1000px;
-    margin:0 auto
+  width:957px;
+height:426px;
+background:rgba(255,255,255,1);
+border-radius:10px;
+    margin: 39px auto;
 }
 .tab1 {
     display:-ms-flexbox;
-    display:flex
+    display:flex;
+    font-size: 16px;
+    margin: 25px 0 0 40px;
 }
 .tab1 div {
-    width:200px;
+    width:66px;
     height:40px;
     border-radius:10px;
-    background-color:#efefef;
+    background-color:#ffff;
     border-bottom-left-radius:0;
     border-bottom-right-radius:0;
     text-align:center;
-    line-height:40px
+    line-height:40px;
+        margin-left: 39px;
+    
 }
 .tab1 div.on {
-    background-color:#e9c527
+     background-color:#ffffff;
+    color: rgba(0,161,227,1);
+    border-bottom: 3px solid;
+    width: 65px;
 }
-.box1 {
-    border-bottom-left-radius:10px;
-    border-bottom-right-radius:10px;
-    height:450px;
-    border:4px solid #e9c527;
-    padding-top:50px
+.underline{
+	width:843px;
+height:1px;
+background:rgba(238,238,238,1);
+    margin: 0 auto;
+}
+.header-list {
+    list-style:none
+}
+.header-list li {
+    float:left;
+        margin: 0 20px;
+    line-height:43px
+}
+.header-list li:hover {
+    background:#979696;
+}
+.header-list li a:hover {
+    color:#000
+}
+.header-list li a {
+    text-decoration:none;
+    color:#CCCCCC;
+    padding:0 10px;
+    display:block
+}
+.box{
+	margin-top:39px;
 }
 .input {
-    width:300px;
-    height:30px;
+    width:662px;
+    height:34px;
     float:left;
     border:none;
     border:1px solid #b7b7b7;
@@ -61,7 +99,7 @@ body {
     border-radius:5px
 }
 .inputBox {
-    width:400px;
+    width:800px;
     margin:0 auto;
     overflow:hidden
 }
@@ -84,16 +122,17 @@ body {
     right:-10px
 }
 .submit {
-    width:200px;
-    height:40px;
+    width:106px;
+height:44px;
+background:rgba(0,163,222,1);
+border-radius:10px;
     border:none;
-    border-radius:10px;
     display:block;
     margin:0 auto;
     font-size:17px;
-    background:#e9c527;
-    margin-top:40px
+    margin-top:40px;
+        color: white;
 }
 .submit:hover {
-    background:#a28813
+    background:rgb(88, 193, 231)
 }
